@@ -1,0 +1,272 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  gap: 35px;
+  justify-content: end;
+  align-items: center;
+  z-index: 2;
+  min-height: 124px;
+  background: linear-gradient(1.02deg, #fc0b0d -17.21%, rgba(74, 153, 211, 0) 75.91%), #ffffff;
+  flex-wrap: wrap;
+  color: black;
+  position: relative;
+  padding-right: 100px;
+}
+nav li {
+  list-style-type: none;
+}
+nav li a {
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  color: #0f001a;
+  text-decoration: none;
+}
+nav .login {
+  margin-right: 100px;
+}
+nav .soko {
+  color: #4a99d3;
+  margin-right: auto;
+  padding-left: 150px;
+  max-width: 100%;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 60px;
+}
+nav .register {
+  margin-right: 0px;
+}
+nav .fas {
+  font-size: 35px;
+  display: none;
+}
+nav .hamburger {
+  display: none;
+}
+
+.dropdown {
+  opacity: 0;
+}
+
+#overlay {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  display: none;
+}
+
+@media screen and (max-width: 1150px) {
+  nav .hamburger {
+    display: block;
+    fill: black;
+    padding-block: 1px;
+    margin-right: -80px;
+  }
+  .dropdown {
+    position: relative;
+    z-index: 2;
+    background-color: aqua;
+    height: 0;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    gap: 10px;
+    font-size: 16px;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  .dropdown a {
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 1px solid blue;
+    padding-bottom: 6px;
+  }
+  .dropdown a:last-child {
+    border-bottom: none;
+    padding-bottom: 10px;
+  }
+  .register {
+    display: none;
+  }
+  .login {
+    display: none;
+  }
+  .sell {
+    display: none;
+  }
+  .profile {
+    display: none;
+  }
+  .ads {
+    display: none;
+  }
+  nav .add_svg {
+    display: none;
+  }
+  nav .profile-svg {
+    display: none;
+  }
+  nav .soko {
+    margin-left: -110px;
+    font-size: 30px;
+  }
+  nav .GO-BACK {
+    display: none;
+  }
+}
+@media screen and (max-width: 520px) {
+  nav .soko {
+    font-size: 15px;
+  }
+  nav .hamburger {
+    margin-right: -90px;
+  }
+}
+@media screen and (max-width: 350px) {
+  nav .soko {
+    font-size: 12px;
+  }
+  nav .hamburger {
+    margin-right: -90px;
+  }
+}
+section {
+  max-width: 1189px;
+  min-height: 896px;
+  background: #eaf6ff;
+  margin: 39px auto;
+}
+section .container .flex-top {
+  display: flex;
+  align-items: center;
+  gap: 81px;
+  flex-wrap: wrap;
+  margin-left: 50px;
+}
+section .container .flex-top .face-image {
+  margin-top: 26px;
+  max-width: 100%;
+}
+section .container .ads {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 48px;
+  /* identical to box height */
+  color: #004b84;
+}
+section .container .button-box .edit {
+  background: #d9d9d9;
+  border-radius: 20px;
+  padding: 15px;
+  width: 256px;
+}
+section .low-text {
+  padding-left: 100px;
+}
+section .low-text .name {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 54px;
+  /* identical to box height */
+  color: #004b84;
+}
+section .low-text .date {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  margin-top: -30px;
+  margin-left: 10px;
+  color: rgba(0, 75, 132, 0.5);
+}
+section .input {
+  margin-left: 100px;
+  max-width: 700px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background: #eaf6ff;
+}
+section .input input {
+  border: 1px solid #000000;
+  outline: none;
+  background: #eaf6ff;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+}
+section .input label {
+  margin-left: 10px;
+  font-size: 19px;
+  font-weight: 300;
+}
+section .input .uni {
+  margin-top: 50px;
+}
+section .input .desc {
+  margin-top: 50px;
+}
+section .input .number {
+  margin-top: 50px;
+}
+
+@media screen and (max-width: 935px) {
+  .container {
+    min-height: 950px;
+  }
+  .container .input input {
+    width: 400px;
+  }
+}
+@media screen and (max-width: 510px) {
+  .container {
+    min-height: 1000px;
+  }
+  .container .input {
+    margin-left: 70px;
+  }
+  .container .input label {
+    font-size: 15px;
+  }
+  .container .input input {
+    width: 300px;
+  }
+}
+@media screen and (max-width: 378px) {
+  .container .flex-top .face-image {
+    margin-left: -30px;
+  }
+  .container .button-box .edit {
+    margin-left: -40px;
+  }
+  .container .input label {
+    font-size: 12px;
+    font-weight: bold;
+    margin-left: -40px;
+  }
+  .container .input input {
+    width: 200px;
+    margin-left: -50px;
+  }
+  .container .low-text .name {
+    margin-left: -82px;
+    font-size: 20px;
+  }
+  .container .low-text .date {
+    margin-left: -81px;
+  }
+}/*# sourceMappingURL=index.css.map */
